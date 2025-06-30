@@ -14,6 +14,11 @@ The PlantVillage dataset, originally published by Hughes & Salathé (2015), is a
 
 - Crop Types: Apple, Corn, Grape, Potato, Tomato, and more
   
+📂 Dataset
+- Source: <a href = "https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset/data"> Kaggle </a>
+
+- Contains thousands of labeled images of healthy and diseased leaves from various crops.
+  
 
 This Porject demonstrates an end-to-end project for classifying plant diseases from leaf images.
 
@@ -24,3 +29,6 @@ This Porject demonstrates an end-to-end project for classifying plant diseases f
 - Approach: A custom Convolutional Neural Network (CNN) is built from scratch using TensorFlow/Keras. Data augmentation techniques are applied to improve model robustness.
 
 - Workflow: The process includes data loading, preprocessing, model training, evaluation.
+
+
+
