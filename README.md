@@ -13,7 +13,7 @@ The PlantVillage dataset, originally published by Hughes & Salathé (2015), is a
 - Classes: 38 distinct categories of plant species and disease combinations 
 
 - Crop Types: Apple, Corn, Grape, Potato, Tomato, and more
-<a href = "https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset/data">Dataset </a>
+  
 
 This Porject demonstrates an end-to-end project for classifying plant diseases from leaf images.
 
