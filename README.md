@@ -261,7 +261,7 @@ plt.show()
 
 ```
 
-<img src = "[img9](https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img9.png)">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img9.png">
 
 <p>
   With 10 epochs we are getting well accuracy on train and test accuracy , not facing overfiitig which is quiet good
