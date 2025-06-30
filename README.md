@@ -76,7 +76,7 @@ Data Augmentation
 
 <h4>
   
-we do we need data augmentation technique?
+Why do we need data augmentation technique?
 </h4>
 
 In order to avoid overfiiting problem. we will `artifically` add data into our dataset through this we can make our existing data more larger.The idea is to alter the training data wth small transformation to reproduce the variation. Approaches that alter the training data in ways that change the array representation while keeping the label same , Some popular augmentations are grayscales, horizontal flips, vertical flips, random crops, color jitters, translations, rotations, and much more.,By applying data augmentation technique we can easily double the number of training data
@@ -286,7 +286,7 @@ plt.show()
 <img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img10.png">
 
 <p>
-with epochs both train and test loss are decresing which is quiet good after 9 epochs our model is doing less error on train as well test data.
+with epochs both train and test loss are decresing which is quiet good after 9 epochs our model is doing less error on train as well on test data.
 But still we can try with more epochs to understand how our model is working like - [20 , 30 , 50 epochs ]
   
 </p>
@@ -295,9 +295,12 @@ But still we can try with more epochs to understand how our model is working lik
 Let Build a Predictive Model
 </h1>
 
-<p>How our our model will work?>
+<p>
+  <h4>How our model will work?</h4>
+  
 - Do some preprocessing and convert imnage into array
-- Once we push any image as input into our convolutional neurel network, our model try to  capture feature fro image  and give the prediction  
+- Once we push any image as an input into our convolutional neurel network, our model try to  capture feature from image and give the prediction
+- 
 </p>
 
 <p>Preprocessing Part</p>
