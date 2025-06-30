@@ -50,19 +50,19 @@ plt.imshow(img)
 plt.show()
 
 ```
-<img src = "img3">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img3.png">
 
 <h4>
   Sample of leaf image from Apple__Apple_scab folder
 </h4>
 
-<img src = "img4">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img4.png">
 
 <h4>
   Now let's see Total Number of image from each folder
 </h4>
 
-<img src = "img5">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img5.png">
 
 Distribution of our dataset
 
@@ -168,7 +168,7 @@ Kernels -
 - This is a basic example with a 2 × 2 kernel:
 </p>
 
-<img src = "img6">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img6.png">
 
 <p>
 We start in the left corner of the input:
@@ -194,7 +194,7 @@ The output matrix of this process is known as the Feature map.
   Now let's see the basic architecture of cnn model
 </h4>
 
-<img src = "img7">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img7.png">
 
 ```
 model = Sequential()
@@ -231,15 +231,15 @@ This is how our model look like -
   
 </p>
 
-<p>
+```
   # Model Evaluation
 print("Evaluating model...")
 val_loss, val_accuracy = model.evaluate(validation_generator, steps= 120)
 print(f"Validation Accuracy: {val_accuracy * 100:.2f}%")
 
-</p>
+```
 
-<img src = "img8">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img8.png">
 
 <p>
   Getting around 80% accuracy in test data , can't say truely good as well as truely bad , But still with 80% accuracy in test data our model quite working well. But still we can increse accuracy by using more epochs.Maybe around 50 epochs or more than that
@@ -261,8 +261,120 @@ plt.show()
 
 ```
 
-<img src = "img9">
+<img src = "[img9](https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img9.png)">
 
 <p>
   With 10 epochs we are getting well accuracy on train and test accuracy , not facing overfiitig which is quiet good
 </p>
+
+
+<h4>
+  Now let see loss graph of train ans test
+</h4>
+
+```
+# Plot training & validation loss values
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('Train and Test loss')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Test'], loc='upper left')
+plt.show()
+
+```
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img10.png">
+
+<p>
+with epochs both train and test loss are decresing which is quiet good after 9 epochs our model is doing less error on train as well test data.
+But still we can try with more epochs to understand how our model is working like - [20 , 30 , 50 epochs ]
+  
+</p>
+
+<h1>
+Let Build a Predictive Model
+</h1>
+
+<p>How our our model will work?>
+- Do some preprocessing and convert imnage into array
+- Once we push any image as input into our convolutional neurel network, our model try to  capture feature fro image  and give the prediction  
+</p>
+
+<p>Preprocessing Part</p>
+
+```
+# Function to load and Process the image
+def load_and_preprocess_image(image_path , target_size = (256 , 256)):
+  img = Image.open(image_path)
+  # Resize the image
+  img = img.resize(target_size)
+  # cpnvert the image to a numpy  array
+  img_array = np.array(img)
+  # Add batch dimension
+  img_array = np.expand_dims(img_array , axis = 0)
+  # Scale the image value to [0,1]
+  img_array = img_array.astype("float32") / 255,
+  return img_array
+
+```
+
+<p>
+  Prediction Part
+</p>
+
+```
+# Function to predict the class of image
+def predict_image_class(model , image_path , class_indeces):
+  preprocessed_img = load_and_preprocess_image(image_path)
+  predictions = model.predict(preprocessed_img)
+  predicted_class_index = np.argmax(predictions , axis = 1)[0]
+  predicted_class_name = class_indeces[predicted_class_index]
+
+  return predicted_class_name
+
+
+class_indices = {v :k for k , v in train_generator.class_indices.items()}
+class_indices
+
+```
+
+<h4>Now let's test our model</h4>
+
+```
+image_path = "/content/plantvillage-dataset/plantvillage dataset/color/Apple___Apple_scab/00075aa8-d81a-4184-8541-b692b78d398a___FREC_Scab 3335.JPG"
+img = plt.imread(image_path)
+plt.imshow(img)
+
+predicted_class_name = predict_image_class(model , image_path , class_indices)
+print("Predicted class Name :" , predicted_class_name)
+
+```
+
+<img src = 'https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img11.png'>
+
+<p>AS you can see our model correctly predicting leaf disease</p>
+
+
+```
+image_path = "/content/plantvillage-dataset/plantvillage dataset/color/Blueberry___healthy/008c85d0-a954-4127-bd26-861dc8a1e6ff___RS_HL 2431.JPG"
+img = plt.imread(image_path)
+plt.imshow(img)
+
+predicted_class_name = predict_image_class(model , image_path , class_indices)
+print("Predicted class Name :" , predicted_class_name)
+
+
+```
+
+<img src = 'https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img12.png'>
+
+```
+image_path = "/content/plantvillage-dataset/plantvillage dataset/color/Peach___Bacterial_spot/002eddd0-b6b3-474c-be08-423e53e24f82___Rutg._Bact.S 1955.JPG"
+img = plt.imread(image_path)
+plt.imshow(img)
+predicted_class_name = predict_image_class(model , image_path , class_indices)
+print("Predicted class Name :" , predicted_class_name)
+
+```
+
+<img src = 'https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img13.png'>
