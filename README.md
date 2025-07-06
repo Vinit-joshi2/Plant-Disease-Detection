@@ -50,19 +50,19 @@ plt.imshow(img)
 plt.show()
 
 ```
-<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img3.png">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/Images/img3.png">
 
 <h4>
   Sample of leaf image from Apple__Apple_scab folder
 </h4>
 
-<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img4.png">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/Images/img4.png">
 
 <h4>
   Now let's see Total Number of image from each folder
 </h4>
 
-<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img5.png">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/Images/img5.png">
 
 Distribution of our dataset
 
@@ -168,7 +168,7 @@ Kernels -
 - This is a basic example with a 2 × 2 kernel:
 </p>
 
-<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img6.png">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/Images/img6.png">
 
 <p>
 We start in the left corner of the input:
@@ -194,7 +194,7 @@ The output matrix of this process is known as the Feature map.
   Now let's see the basic architecture of cnn model
 </h4>
 
-<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img7.png">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/Images/img7.png">
 
 ```
 model = Sequential()
@@ -239,7 +239,7 @@ print(f"Validation Accuracy: {val_accuracy * 100:.2f}%")
 
 ```
 
-<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img8.png">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/Images/img8.png">
 
 <p>
   Getting around 80% accuracy in test data , can't say truely good as well as truely bad , But still with 80% accuracy in test data our model quite working well. But still we can increse accuracy by using more epochs.Maybe around 50 epochs or more than that
@@ -261,7 +261,7 @@ plt.show()
 
 ```
 
-<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img9.png">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/Images/img9.png">
 
 <p>
   With 10 epochs we are getting well accuracy on train and test accuracy , not facing overfiitig which is quiet good
@@ -283,7 +283,7 @@ plt.legend(['Train', 'Test'], loc='upper left')
 plt.show()
 
 ```
-<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img10.png">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/Images/img10.png">
 
 <p>
 with epochs both train and test loss are decresing which is quiet good after 9 epochs our model is doing less error on train as well on test data.
@@ -353,7 +353,7 @@ print("Predicted class Name :" , predicted_class_name)
 
 ```
 
-<img src = 'https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img11.png'>
+<img src = 'https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/Images/img11.png'>
 
 <p>AS you can see our model correctly predicting leaf disease</p>
 
@@ -369,7 +369,7 @@ print("Predicted class Name :" , predicted_class_name)
 
 ```
 
-<img src = 'https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img12.png'>
+<img src = 'https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/Images/img12.png'>
 
 ```
 image_path = "/content/plantvillage-dataset/plantvillage dataset/color/Peach___Bacterial_spot/002eddd0-b6b3-474c-be08-423e53e24f82___Rutg._Bact.S 1955.JPG"
@@ -380,4 +380,4 @@ print("Predicted class Name :" , predicted_class_name)
 
 ```
 
-<img src = 'https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img13.png'>
+<img src = 'https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/Images/img13.png'>
