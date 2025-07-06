@@ -30,7 +30,7 @@ This Porject demonstrates an end-to-end project for classifying plant diseases f
 
 - Workflow: The process includes data loading, preprocessing, model training, evaluation.
 
-<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/img1.png">
+<img src = "https://github.com/Vinit-joshi2/Plant-Disease-Detection/blob/main/Images/img1.png">
 
 <h1>
   Data Preprocessing
